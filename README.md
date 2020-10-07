@@ -1,39 +1,42 @@
-# surfs_up
+# Surfs Up
 
-1. **Overview of the analysis:** Explain the purpose of this analysis.
+### Overview of the analysis
 
-information about temperature trends before opening the surf shop
-
-wo technical analysis deliverables and a written report
+This is an analysis to expose temperature trends for the months of June and December in Oahu. For a surf and ice cream shop.
 
 
 
-1. **Results:** Provide a bulleted list with three major points from the two analysis deliverables. Use images as support where needed.
+### Results
 
+There are three key differences in the weather between June and December that are shown in the two summary tables below.
 
+* The mean temperature in June is more favorable.
+* The minimum temperature in Jun is also more favorable.
+* The weather in June is slightly more consistent which seems to be more favorable as well.
+* 
 
-There is a bulleted list that addresses the three key differences in weather between June and December.
-
-Determine the Summary Statistics for June
-
-
+Summary Statistics for June
 
 ![June_Temps](resources/June_Temps.PNG)
 
 
 
-Determine the Summary Statistics for December
-
-
-
-
+Summary Statistics for December
 
 ![December_Temps](resources//December_Temps.PNG)
 
+### Summary
 
+The statistics in the data indicate that business would be better and more consistent in June but not significantly better.
 
+To improve the accuracy of the results some additional views of the data are recommended.  At a minimum the summary statistics for precipitation should be added to the analysis as shown in the two queries below.
 
+```sql
+jun_prcp_results = session.query(Measurement.date, Measurement.prcp).filter(extract('month', Measurement.date) == 6)
+```
 
-1. **Summary:** Provide a high-level summary of the results and two additional queries that you would perform to gather more weather data for June and December.
+```sql
+ dec_prcp_results = session.query(Measurement.date, Measurement.prcp).filter(extract('month', Measurement.date) == 12)
+```
 
-There is a high-level summary of the results and there are two additional queries to perform to gather more weather data for June and December. 
+These two queries would isolate the precipitation data.  In addition to this charts and time data could be utilized provide a better view of the data and expose additional trends.
