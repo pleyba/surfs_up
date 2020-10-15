@@ -17,13 +17,13 @@ There are three key differences in the weather between June and December that ar
 
 Summary Statistics for June
 
-![June_Temps](resources/June_Temps.PNG)
+![June_Temps](./Resources/June_Temps.PNG)
 
 
 
 Summary Statistics for December
 
-![December_Temps](resources//December_Temps.PNG)
+![December_Temps](./Resources//December_Temps.PNG)
 
 ### Summary
 
